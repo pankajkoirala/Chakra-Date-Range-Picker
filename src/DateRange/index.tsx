@@ -220,7 +220,6 @@ export const DateRangePicker = ({
       <Portal>
         <PopoverContent m={'4px'} width={'auto'}>
           <PopoverArrow bg={'gray'} />
-
           <PopoverBody border={'1px solid grey'} borderRadius={'4px'}>
             <Flex>
               {hasSideMenu && (
