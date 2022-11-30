@@ -20,8 +20,6 @@ $ yarn add Chakra-Date-Range-Picker
 import { DateRangePicker } from 'Chakra-Date-Range-Picker';
 
 const App=()=>{
-       const value={ '2022-5-12': { value: 2, message: 'leave'}}
-       const colors=['red','blue','green','pink','orange']
        return(
         <DateRangePicker onChange={e => console.log(e)} />
     )}
