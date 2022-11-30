@@ -161,21 +161,21 @@ export default (
   // These ensure a total of 42 days (6 weeks) displayed on the calendar
 
   const daysFromPrevMonth = monthFirstDay - 1;
-  const daysFromNextMonth =
-    CALENDAR_WEEKS * 7 - (daysFromPrevMonth + monthDays);
+  // const daysFromNextMonth =
+  //   CALENDAR_WEEKS * 7 - (daysFromPrevMonth + monthDays);
   // Get the previous and next months and years
 
   const { month: prevMonth, year: prevMonthYear } = getPreviousMonth(
     month,
     year
   );
-  const { month: nextMonth, year: nextMonthYear } = getNextMonth(month, year);
+  // const { month: nextMonth, year: nextMonthYear } = getNextMonth(month, year);
   // Get number of days in previous month
   const prevMonthDays = getMonthDays(prevMonth, prevMonthYear);
   // Builds dates to be displayed from previous month
 
   const prevMonthDates = [...new Array(daysFromPrevMonth)].map(
-    (n, index): CalendarBuilderDate => {
+    (_, index): CalendarBuilderDate => {
       const day = index + 1 + (prevMonthDays - daysFromPrevMonth);
 
       const date = new Date(prevMonthYear, prevMonth, day);
@@ -191,7 +191,7 @@ export default (
   // Builds dates to be displayed from current month
 
   const thisMonthDates = [...new Array(monthDays)].map(
-    (n, index): CalendarBuilderDate => {
+    (_, index): CalendarBuilderDate => {
       const day = index + 1;
 
       const date = new Date(year, month, day);
@@ -206,20 +206,20 @@ export default (
   );
 
   // Builds dates to be displayed from next month
-  const nextMonthDates = [...new Array(daysFromNextMonth)].map(
-    (n, index): CalendarBuilderDate => {
-      const day = index + 1;
+  // const nextMonthDates = [...new Array(daysFromNextMonth)].map(
+  //   (n, index): CalendarBuilderDate => {
+  //     const day = index + 1;
 
-      const date = new Date(nextMonthYear, nextMonth, day);
+  //     const date = new Date(nextMonthYear, nextMonth, day);
 
-      return {
-        year: nextMonthYear,
-        month: zeroPad(nextMonth, 2),
-        day: zeroPad(day, 2),
-        dayOfWeek: date.getDay(),
-      };
-    }
-  );
+  //     return {
+  //       year: nextMonthYear,
+  //       month: zeroPad(nextMonth, 2),
+  //       day: zeroPad(day, 2),
+  //       dayOfWeek: date.getDay(),
+  //     };
+  //   }
+  // );
 
   // Combines all dates from previous, current and next months
   // return [...prevMonthDates, ...thisMonthDates, ...nextMonthDates];

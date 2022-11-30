@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { DateRangePicker } from 'Chakra-Date-Range-Picker';
+import { DateRangePicker } from 'chakra-date-range-picker';
 
 const App = () => {
   return (

@@ -5,19 +5,19 @@
 #### using npm:
 
 ```
-$ npm i Chakra-Date-Range-Picker
+$ npm i chakra-date-range-picker
 ```
 
 #### using yarn:
 
 ```
-$ yarn add Chakra-Date-Range-Picker
+$ yarn add chakra-date-range-picker
 ```
 
 ## Example
 
 ```ruby
-import { DateRangePicker } from 'Chakra-Date-Range-Picker';
+import { DateRangePicker } from 'chakra-date-range-picker';
 
 const App=()=>{
        return(
